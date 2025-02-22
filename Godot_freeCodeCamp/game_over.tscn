@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dysdndyoxw86e"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_ntikr"]
+
+[node name="GameOVer" type="CanvasLayer"]
+script = ExtResource("1_ntikr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 302.0
+offset_top = 203.0
+offset_right = 805.0
+offset_bottom = 431.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 23.0
+offset_right = 385.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 499.0
+offset_top = 338.0
+offset_right = 595.0
+offset_bottom = 391.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]

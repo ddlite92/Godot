@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1x4v0evxdu7g"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_woaim"]
+[ext_resource type="PackedScene" uid="uid://kxtuut0ehmuy" path="res://BG.tscn" id="2_wmgus"]
+
+[node name="main" type="Node2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_woaim")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 362.0
+offset_top = 100.0
+offset_right = 502.0
+offset_bottom = 171.0
+scale = Vector2(3, 3)
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 362.0
+offset_top = 327.0
+offset_right = 502.0
+offset_bottom = 398.0
+scale = Vector2(3, 3)
+tooltip_text = "Click to quit the game"
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_wmgus")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
